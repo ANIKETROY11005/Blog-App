@@ -1,22 +1,31 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Navbar() {
 
-    const navlink = {
-        "post": {
-            "dir": "/posts"
+    const navlink = [
+        {
+            "href": "/posts",
+            "name": "posts"
         },
-        "create-post": {
-            "dir": "/create-post"
+        {
+            "href": "/create-post",
+            "name": "create-post"
         }
-    }
+    ]
 
 
     return (
-        <nav className='flex gap-1 text-base'>
-            <li className=''>
-                <ul className=''>post</ul>
-            </li>
+        <nav className='flex text-base'>
+            <ul className='flex'>
+                {
+                    navlink.map((link) => (
+                        <li key={link.href}>
+                            <Link href={link.href}>{link.name}</Link>
+                        </li>
+                    ))
+                }
+            </ul>
         </nav>
     )
 }
