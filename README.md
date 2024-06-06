@@ -1,9 +1,10 @@
-#MY BLOG APP
+# MY BLOG APP
 
-##Technologies:
-1.NextJS
-2.TailwindCSS
-3.Typescript
+## Technologies:
+
+1. NextJS
+2. TailwindCSS
+3. Typescript
 
 ## Deploy on Vercel
 
